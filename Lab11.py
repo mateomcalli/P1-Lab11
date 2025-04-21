@@ -92,7 +92,7 @@ if __name__ == '__main__':
             total = 0
             for score in scores:
                 total += score
-            average = total / len(scores)-1
+            average = total / len(scores)
             print(f'Min: {min_score}%')
             print(f'Avg: {round(average)}%')
             print(f'Max: {max_score}%\n')
