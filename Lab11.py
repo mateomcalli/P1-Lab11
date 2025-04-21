@@ -40,18 +40,17 @@ def formatter(): # uses for loops to format the info into dictionaries
 
 if __name__ == '__main__':
     students, assignments, assignments2 = formatter() # creates students/assignments dicts
-    while True:
-        print('1. Student grade')
-        print('2. Assignment statistics')
-        print('3. Assignment graph\n')
-        sel = input('Enter your selection: ')
+    print('1. Student grade')
+    print('2. Assignment statistics')
+    print('3. Assignment graph\n')
+    sel = input('Enter your selection: ')
 
-        if sel == '1':
-            name = input("What is the student's name: ")
-            counter = 0
-            if name not in students.keys():
-                print('Student not found.\n')
-                continue
+    if sel == '1':
+        name = input("What is the student's name: ")
+        counter = 0
+        if name not in students.keys():
+            print('Student not found.\n')
+        else:
             submissions = os.path.join('data', 'submissions')
             score = 0
             for f_name in os.listdir(submissions):
@@ -70,11 +69,11 @@ if __name__ == '__main__':
             final = round(final)
             print(f'{final}%\n')
 
-        if sel == '2':
-            assignment = input("What is the assignment name: ")
-            if assignment not in assignments2.keys():
-                print('Assignment not found.\n')
-                continue
+    if sel == '2':
+        assignment = input("What is the assignment name: ")
+        if assignment not in assignments2.keys():
+            print('Assignment not found.\n')
+        else:
             submissions = os.path.join('data', 'submissions')
             scores = []
             for f_name in os.listdir(submissions):
@@ -98,11 +97,11 @@ if __name__ == '__main__':
             print(f'Avg: {round(average)}%')
             print(f'Max: {max_score}%\n')
 
-        if sel == '3':
-            assignment = input("What is the assignment name: ")
-            if assignment not in assignments2.keys():
-                print('Assignment not found.\n')
-                continue
+    if sel == '3':
+        assignment = input("What is the assignment name: ")
+        if assignment not in assignments2.keys():
+            print('Assignment not found.\n')
+        else:
             submissions = os.path.join('data', 'submissions')
             scores = []
             for f_name in os.listdir(submissions):
