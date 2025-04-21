@@ -1,8 +1,8 @@
 import os
 import matplotlib.pyplot as plt
 
-students_file = open('students.txt', 'r')
-assignments_file = open('assignments.txt', 'r')
+students_file = open('data/students.txt', 'r')
+assignments_file = open('data/assignments.txt', 'r')
 
 def formatter(): # uses for loops to format the info into dictionaries
     s = {}
@@ -52,7 +52,7 @@ if __name__ == '__main__':
             if name not in students.keys():
                 print('Student not found.\n')
                 continue
-            submissions = 'C:/Users/mmcal/lab11/data/submissions'
+            submissions = 'C:/Users/mmcal/PycharmProjects/P1-Lab11/data/submissions'
             score = 0
             for f_name in os.listdir(submissions):
                 file_path = os.path.join(submissions, f_name)
@@ -75,7 +75,7 @@ if __name__ == '__main__':
             if assignment not in assignments2.keys():
                 print('Assignment not found.\n')
                 continue
-            submissions = 'C:/Users/mmcal/lab11/data/submissions'
+            submissions = 'C:/Users/mmcal/PycharmProjects/P1-Lab11/data/submissions'
             scores = []
             for f_name in os.listdir(submissions):
                 file_path = os.path.join(submissions, f_name)
@@ -103,7 +103,7 @@ if __name__ == '__main__':
             if assignment not in assignments2.keys():
                 print('Assignment not found.\n')
                 continue
-            submissions = 'C:/Users/mmcal/lab11/data/submissions'
+            submissions = 'C:/Users/mmcal/PycharmProjects/P1-Lab11/data/submissions'
             scores = []
             for f_name in os.listdir(submissions):
                 file_path = os.path.join(submissions, f_name)
