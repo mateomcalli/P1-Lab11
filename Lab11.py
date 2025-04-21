@@ -52,7 +52,7 @@ if __name__ == '__main__':
             if name not in students.keys():
                 print('Student not found.\n')
                 continue
-            submissions = 'C:/Users/mmcal/PycharmProjects/P1-Lab11/data/submissions'
+            submissions = os.path.join('data', 'submissions')
             score = 0
             for f_name in os.listdir(submissions):
                 file_path = os.path.join(submissions, f_name)
@@ -75,7 +75,7 @@ if __name__ == '__main__':
             if assignment not in assignments2.keys():
                 print('Assignment not found.\n')
                 continue
-            submissions = 'C:/Users/mmcal/PycharmProjects/P1-Lab11/data/submissions'
+            submissions = os.path.join('data', 'submissions')
             scores = []
             for f_name in os.listdir(submissions):
                 file_path = os.path.join(submissions, f_name)
@@ -103,7 +103,7 @@ if __name__ == '__main__':
             if assignment not in assignments2.keys():
                 print('Assignment not found.\n')
                 continue
-            submissions = 'C:/Users/mmcal/PycharmProjects/P1-Lab11/data/submissions'
+            submissions = os.path.join('data', 'submissions')
             scores = []
             for f_name in os.listdir(submissions):
                 file_path = os.path.join(submissions, f_name)
